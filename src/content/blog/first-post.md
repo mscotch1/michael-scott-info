@@ -1,7 +1,6 @@
 ---
-title: 'First post'
-subtitle: 'FizzBuzz in TypeScript'
-description: 'Testing out if the blog is working correctly'
+title: 'First Post'
+description: 'FizzBuzz in TypeScript'
 pubDate: 'Jul 12 2025'
 heroImage: '/blog-placeholder-3.jpg'
 ---
@@ -26,7 +25,7 @@ function fizzBuzz(n: number): void {
   }
 }
 
-fizzBuzz(30);
+fizzBuzz(100);
 ```
 
 Thanks for reading!
