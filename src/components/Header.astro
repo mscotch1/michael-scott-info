@@ -2,6 +2,7 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 import Search from "astro-pagefind/components/Search";
+import { Icon } from "astro-icon/components";
 ---
 
 
@@ -35,17 +36,19 @@ import Search from "astro-pagefind/components/Search";
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+    <a href="/" style="padding: 0.5em; border: 0">
+      <h2>{SITE_TITLE}</h2>
+      <small>Collected ramblings of Michael Scott</small>
+    </a>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
-    <div>
+    <div style="justify-self: flex-end">
       <button
         class="btn-link"
         id="opensearch">
-        Search
+        <Icon name="famicons:search" /> Search
         <code class="shortcut">CTRL+K</code>
       </button>
     </div>
@@ -64,6 +67,7 @@ import Search from "astro-pagefind/components/Search";
 	}
 	h2 {
 		margin: 0;
+    padding: 0;
 		font-size: 1em;
 	}
 
@@ -72,15 +76,24 @@ import Search from "astro-pagefind/components/Search";
 		text-decoration: none;
 	}
 	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
 	}
+
+  nav small {
+		color: rgb(var(--gray));
+  }
   nav a, nav button {
 		padding: 1em 0.5em;
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
+
+    &:hover {
+      color: var(--accent);
+      transition: color 0.3s ease;
+    }
 	}
 	nav a.active {
 		text-decoration: none;
@@ -105,7 +118,8 @@ import Search from "astro-pagefind/components/Search";
   }
 
   dialog {
-    max-width: 600px;
+    min-width: 600px;
+    max-width: 900px;
     max-height: 80vh;
     border-radius: 0.5em;
     border: 2px solid var(--dark-gray);

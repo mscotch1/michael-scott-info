@@ -88,7 +88,7 @@ p {
 	margin-bottom: 1em;
 }
 .prose p {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 textarea {
 	width: 100%;
@@ -127,6 +127,11 @@ hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
+svg {
+  display: inline;
+  vertical-align: text-top;
+}
+
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
