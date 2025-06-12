@@ -132,7 +132,11 @@ svg {
   vertical-align: text-top;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 820px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
 	body {
 		font-size: 18px;
 	}
