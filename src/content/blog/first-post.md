@@ -1,7 +1,7 @@
 ---
 title: 'First Post'
 description: 'FizzBuzz in TypeScript'
-pubDate: 'Jul 12 2025'
+pubDate: 'Jun 12 2025'
 heroImage: '/blog-placeholder-3.jpg'
 ---
 

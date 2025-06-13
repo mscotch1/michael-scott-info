@@ -48,8 +48,9 @@ import { Icon } from "astro-icon/components";
       <button
         class="btn-link"
         id="opensearch">
-        <Icon name="famicons:search" /> Search
-        <code class="shortcut">CTRL+K</code>
+        <Icon name="famicons:search" />
+        <span class="hide-on-mobile">Search</span>
+        <code class="shortcut hide-on-mobile">CTRL+K</code>
       </button>
     </div>
   </nav>
@@ -70,6 +71,9 @@ import { Icon } from "astro-icon/components";
     padding: 0;
 		font-size: 1em;
 	}
+  small {
+    font-size: 0.8em;
+  }
 
 	h2 a,
 	h2 a.active {
@@ -118,8 +122,8 @@ import { Icon } from "astro-icon/components";
   }
 
   dialog {
-    min-width: 600px;
-    max-width: 900px;
+    min-width: 40vw;
+    max-width: 90vw;
     max-height: 80vh;
     border-radius: 0.5em;
     border: 2px solid var(--dark-gray);
@@ -143,8 +147,8 @@ import { Icon } from "astro-icon/components";
 		display: flex;
 	}
 	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
+    h2 {
+      font-size: 0.9em;
+    }
 	}
 </style>
