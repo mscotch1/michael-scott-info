@@ -15,7 +15,7 @@ function fizzBuzz(n: number): void {
     let output = "";
 
     if (i % 3 === 0) {
-        output += "Foo";
+        output += "Fizz";
     }
     if (i % 5 === 0) {
         output += "Buzz";
