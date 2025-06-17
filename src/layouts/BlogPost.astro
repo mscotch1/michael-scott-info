@@ -1,9 +1,10 @@
 ---
-import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import { Icon } from "astro-icon/components";
+import type { CollectionEntry } from 'astro:content';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -45,8 +46,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         margin: 0;
 			}
       .subtitle {
+        font-style: italic;
         color: rgb(var(--gray-dark))
       }
+			.author {
+				margin-bottom: 0.5em;
+				color: rgb(var(--gray-dark));
+			}
 			.date {
 				margin-bottom: 0.5em;
 				color: rgb(var(--gray));
@@ -67,6 +73,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				<div class="prose">
 					<div class="title">
 						<h1>{title}</h1>
+            <div class="author">
+              <Icon name="famicons:pencil" />
+              Michael Scott
+            </div>
             {description && (
               <p class="subtitle">{description}</p>
             )}
